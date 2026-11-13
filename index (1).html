@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoTrack | Cryptocurrency Live Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">◆ CryptoTrack</div>
+       
+    </nav>
+
+    <main class="container">
+        <header class="hero">
+            <span class="live-badge"><span class="dot"></span> Live</span>
+            <h1>Cryptocurrency <span class="accent">Live Tracker</span></h1>
+            <p class="subtitle">Real-time prices for BTC, ETH and BNB, updated automatically.</p>
+        </header>
+
+        <section class="cards" id="markets">
+            <article class="crypto-card" id="btc-card">
+                <div class="coin-image">
+                    <img src="https://images.unsplash.com/photo-1628151015968-3a4429e9ef04?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Bitcoin">
+                    </div>
+                </div>
+                <h2 class="coin-name">Bitcoin</h2>
+                <p class="symbol">BTC</p>
+                <p class="price-label">Current price (USD)</p>
+                <p class="price">$<span id="btc-price">0.00</span></p>
+                <p class="change-row">24h Change: <span id="btc-change" class="change">0.00%</span></p>
+            </article>
+
+            <article class="crypto-card" id="eth-card">
+                <div class="coin-image">
+                    <img src="https://i.pinimg.com/736x/63/be/61/63be615f8e6d526422775eeca0a15488.jpg" alt="Ethereum">
+                </div>
+                <h2 class="coin-name">Ethereum</h2>
+                <p class="symbol">ETH</p>
+                <p class="price-label">Current price (USD)</p>
+                <p class="price">$<span id="eth-price">0.00</span></p>
+                <p class="change-row">24h Change: <span id="eth-change" class="change">0.00%</span></p>
+            </article>
+
+            <article class="crypto-card" id="bnb-card">
+                <div class="coin-image">
+                    <img src="https://i.pinimg.com/1200x/6c/81/aa/6c81aacbfa401e821cfa466a11522cbb.jpg" alt="BNB">
+                        </div>
+                </div>
+                <h2 class="coin-name">BNB</h2>
+                <p class="symbol">BNB</p>
+                <p class="price-label">Current price (USD)</p>
+                <p class="price">$<span id="bnb-price">0.00</span></p>
+                <p class="change-row">24h Change: <span id="bnb-change" class="change">0.00%</span></p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer" id="status-bar">
+        <p id="status">Loading prices...</p>
+        <p class="last-updated" id="last-updated">Last updated: </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
