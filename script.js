@@ -4,7 +4,7 @@ export default async function handler(req, res) {
       "https://pro-api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin&vs_currencies=usd&include_24hr_change=true",
       {
         headers: {
-          "CG-end9mXeYK4r5V4k8xwQBUTpQ": process.env.COINGECKO_API_KEY,
+          "coingecko api key": process.env.COINGECKO_API_KEY,
         },
       }
     );
