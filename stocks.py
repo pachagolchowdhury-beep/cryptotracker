@@ -47,7 +47,7 @@ def prices_api():
     try:
         response = requests.get(
             API_URL,
-            headers={"CG-end9mXeYK4r5V4k8xwQBUTpQ": api_key},
+            headers={"api from coingecko": api_key},
             timeout=10,
         )
         response.raise_for_status()
