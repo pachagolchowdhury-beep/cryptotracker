@@ -147,7 +147,7 @@ cryptotracker/
 - Keep experimenting and learning through new projects.
 - Would love any insight on any other improvements, I'm always in for learning.
 
-## License
+
 
 
 (shot my shot at online trading(OHMYGODHFBGJDFSJDNV))
