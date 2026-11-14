@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e;
+    color: #fff;
+}
+
+/* ============================
+   LAYOUT (new)
+   ============================ */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+.subtitle {
+    color: #a0a0b0;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+/* ============================
+   CARDS
+   ============================ */
+.crypto-card {
+    background-color: #162447;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.crypto-card:hover {
+    transform: scale(1.05);
+}
+
+/* ============================
+   COIN IMAGES
+   ============================ */
+.coin-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #e94560;
+    background-color: #fff; /* fallback if image doesn't load */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coin-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* makes sure image fills the circle */
+}
+
+/* ============================
+   TEXT
+   ============================ */
+.symbol {
+    font-size: 14px;
+    color: #a0a0b0;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.change-row {
+    font-size: 16px;
+}
+
+.change {
+    font-weight: bold;
+}
+
+.change.positive {
+    color: #00e676;
+}
+
+.change.negative {
+    color: #ff5252;
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0f3460;
+    margin-top: 40px;
+    border-radius: 12px;
+}
+
+footer a {
+    color: #e94560;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.last-updated {
+    font-size: 13px;
+    color: #a0a0b0;
+    margin-top: 5px;
+}
+
+/* ============================
+   HOME PAGE POLISH (added)
+   Everything above is untouched; these only layer on top.
+   ============================ */
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 15% 0%, rgba(233, 69, 96, 0.18), transparent 40%),
+        radial-gradient(circle at 85% 20%, rgba(15, 52, 96, 0.55), transparent 45%),
+        #1a1a2e;
+    background-attachment: fixed;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 16px 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: rgba(15, 52, 96, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Hero */
+.hero {
+    padding: 56px 0 40px;
+}
+
+.hero h1 {
+    margin-bottom: 12px;
+    font-size: clamp(30px, 6vw, 48px);
+    line-height: 1.15;
+}
+
+.accent {
+    background: linear-gradient(90deg, #e94560, #ff8a5c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero .subtitle {
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #00e676;
+    background: rgba(0, 230, 118, 0.1);
+    border: 1px solid rgba(0, 230, 118, 0.3);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #00e676;
+    animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.6); }
+    70%  { box-shadow: 0 0 0 10px rgba(0, 230, 118, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); }
+}
+
+/* Cards */
+.crypto-card {
+    position: relative;
+    overflow: hidden;
+    padding: 28px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.crypto-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #e94560, #0f3460);
+}
+
+.crypto-card:hover {
+    border-color: #e94560;
+    box-shadow: 0 12px 30px rgba(233, 69, 96, 0.25);
+}
+
+.coin-name {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.symbol {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+    color: #e94560;
+    background: rgba(233, 69, 96, 0.14);
+    margin-bottom: 18px;
+}
+
+.price-label {
+    font-size: 12px;
+    color: #a0a0b0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.crypto-card .price {
+    font-size: 30px;
+}
+
+/* Footer */
+footer {
+    margin: 56px auto 0;
+    max-width: 1000px;
+    border-radius: 12px 12px 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-bottom: none;
+}
+
+@media (max-width: 600px) {
+    .navbar { padding: 14px 18px; }
+    .hero { padding: 36px 0 28px; }
+}
+
+.logo {
+    font-size: 24px;
+    color: #e94560;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e94560;
+}
